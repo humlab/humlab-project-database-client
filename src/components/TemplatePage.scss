@@ -1,7 +1,3 @@
-.project-page-container {
-    color: #333;
-}
-
 h2 {
     font-size: 1.5em;
     margin: 0;
@@ -29,7 +25,7 @@ h2 {
   
   /* Image Carousel */
   .image-carousel {
-    grid-column: span 6; /* Full width */
+    grid-column: span 12; /* Full width */
     height: 300px;
     background-color: #f4f4f4;
     display: flex;
@@ -37,45 +33,34 @@ h2 {
     align-items: center;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: auto;
-}
+  }
   
   /* Pull Quotes */
   .pull-quote {
     grid-column: span 6; /* Half width */
     font-size: 1.2rem;
     font-style: italic;
-    background: linear-gradient(135deg, #0a2fa5, #0a2fa5 33.33%, #4d7cff 66.66%, #4d7cff);
-    border-radius: 8px;
+    background-color: #fff5e6;
     padding: 1.5rem;
+    border-left: 4px solid #ff9900;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-
-  .quote-container {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 8px;
-    padding: 1em;
+  
+  /* Explore Button */
+  .explore-button {
+    grid-column: span 12; /* Full width */
+    text-align: center;
   }
   
-  .button {
-    grid-column: span 2; /* Full width */
-    text-align: center;
+  .explore-button button {
     padding: 0.75rem 2rem;
     font-size: 1.2rem;
     color: #fff;
-    background: linear-gradient(135deg, #0a2fa5, #0a2fa5 33.33%, #4d7cff 66.66%, #4d7cff);
+    background-color: #0073e6;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth animation */
   }
-  
-  .button:hover {
-    transform: translateY(-5px); /* Moves the button up */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
-  }
-  
   
   .explore-button button:hover {
     background-color: #005bb5;

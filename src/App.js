@@ -4,235 +4,157 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; // Make sure Router is imported
 import QueerAIPage from './components/QueerAIPage';
 
-// Define your individual project pages
-function Project1Page() {
-  return <h2>Project 1</h2>;
-}
-
-function Project2Page() {
-  return <h2>Project 2</h2>;
-}
-
 function GalleryPage() {
-  return <div id="main-gallery-container">
+  
+  return <div>
+          <h1>Humlab Showcase</h1>
+          <div id="main-gallery-container">
 
+                <Link to="/sead" class="project-tile-link">
+                  <div className="project-tile" title="SEAD logotype" style={{ backgroundImage: "url('./assets/sead/sead-screen-small.png')" }}>
+                      <h2>SEAD</h2>
+                  </div>
+                </Link>
 
-          <div className="project-tile">
-            <Link to="/sead">
-              <h2>SEAD</h2>
-              <div className="project-image">
-                <img src="assets/sead/SEAD-logo-with-subtext.png" alt="SEAD logotype" />
+                <Link to="/visp" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/visp/screenshot2.png')" }}>
+                    <h2>Visible Speech</h2>
+                  </div>
+                </Link>
+
+                <Link to="/westac" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/westac/screenshot1.png')" }}>
+                    <h2>Welfare state analytics</h2>
+                  </div>
+                </Link>
+
+                <Link to="/inidun" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/inidun/inidun.png')" }}>
+                    <h2>International Ideas at UNESCO</h2>
+                  </div>
+                </Link>
+
+                <Link to="/swedeb" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/swedeb/SweDeb.png')" }}>
+                    <h2>SweDeb</h2>
+                  </div>
+                </Link>
+
+                <Link to="/infravis-sead" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/infravis-sead/seadbugs-screenshot.png')" }}>
+                    <h2>SEAD Conservation Paleobiology</h2>
+                  </div>
+                </Link>
+
+                <Link to="/digibon" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/digibon/digibon-screenshot.png')" }}>
+                    <h2>DigiBön</h2>
+                  </div>
+                </Link>
+
+                <Link to="/plagiat" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/kuber.png')" }}>
+                    <h2>Nätutbildning om plagiat</h2>
+                  </div>
+                </Link>
+
+                <Link to="/queer-ai" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/queer-ai/queer-ai.png')" }}>
+                    <h2>Queer AI</h2>
+                  </div>
+                </Link>
+
+                <Link to="/aps" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/aps/aps_love.jpg')" }}>
+                    <h2>Andra Person Singular</h2>
+                  </div>
+                </Link>
+
+                <Link to="/umanista" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/umanista/umanista.png')" }}>
+                    <h2>Umanista</h2>
+                  </div>
+                </Link>
+
+                <Link to="/linguistic-landscape" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/linguistic-landscape/LL-screenshot.png')" }}>
+                    <h2>The Language of Place-making</h2>
+                  </div>
+                </Link>
+
+                <Link to="/dialectical-imaginaries" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/dialectical-imaginaries/di.png')" }}>
+                    <h2>Dialectical Imaginaries</h2>
+                  </div>
+                </Link>
+
+                <Link to="/going-beyond-search" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/going-beyond-search/kuber2.png')" }}>
+                    <h2>Going beyond search</h2>
+                  </div>
+                </Link>
+
+                <Link to="/tcoir" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/tcoir/tcoir.png')" }}>
+                    <h2>The Culture of International Society</h2>
+                  </div>
+                </Link>
+
+                <Link to="/digital-periegesis" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/digital-periegesis/digital-periegesis.png')" }}>
+                    <h2>Digital Periegesis</h2>
+                  </div>
+                </Link>
+
+                <Link to="/melody" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/melody/melody.png')" }}>
+                    <h2>Melody</h2>
+                  </div>
+                </Link>
+
+                <Link to="/iaccept" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/iaccept/iaccept.jpg')" }}>
+                    <h2>iAccept</h2>
+                  </div>
+                </Link>
+
+                <Link to="/rave" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/rave+c-rave/rave.png')" }}>
+                    <h2>RAVE & C-RAVE</h2>
+                  </div>
+                </Link>
+
+                <Link to="/digitalamodeller" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/digitalamodeller/model3.png')" }}>
+                    <h2>Digitala modeller</h2>
+                  </div>
+                </Link>
+
+                <Link to="/enida" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/enida/enida-screenshot-1.png')" }}>
+                    <h2>ENIDA</h2>
+                  </div>
+                </Link>
+
+                <Link to="/yrkesrum" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/yrkesrum/yrkesrum1.png')" }}>
+                    <h2>Yrkesrum</h2>
+                  </div>
+                </Link>
+
+                <Link to="/utopia" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/utopia/1.png')" }}>
+                    <h2>Utopia</h2>
+                  </div>
+                </Link>
+
+                <Link to="/staden" className="project-tile-link">
+                  <div className="project-tile" style={{ backgroundImage: "url('./assets/staden-screenshot-1.png')" }}>
+                    <h2>Staden</h2>
+                  </div>
+                </Link>
+
               </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/visp">
-              <h2>Visible Speech</h2>
-              <div className="project-image">
-                <img src="assets/visp/screenshot2.png" alt="Screenshot of tool, soundwaves" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/westac">
-              <h2>Welfare state analytics</h2>
-              <div className="project-image">
-                <img src="assets/westac/screenshot1.png" alt="Westac generic headline screenshot" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/inidun">
-              <h2>International Ideas at UNESCO</h2>
-              <div className="project-image">
-                <img src="assets/inidun/inidun.png" alt="Inidun website" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/swedeb">
-              <h2>SweDeb</h2>
-              <div className="project-image">
-                <img src="assets/swedeb/SweDeb.png" alt="Example data within project" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/infravis-sead">
-              <h2>SEAD Conservation Paleobiology</h2>
-              <div className="project-image">
-                <img src="assets/infravis-sead/seadbugs-screenshot.png" alt="Screenshot showing BugsCEP data" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/digibon">
-              <h2>DigiBön</h2>
-              <div className="project-image">
-                <img src="assets/digibon/digibon-screenshot.png" alt="Screenshot of map application" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/plagiat">
-              <h2>Nätutbildning om plagiat</h2>
-              <div className="project-image">
-                <img src="assets/kuber.png" alt="Humlabs light cubes" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/queer-ai">
-              <h2>Queer AI</h2>
-              <div className="project-image">
-                <img src="assets/queer-ai/queer-ai.png" alt="Queer AI brain" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/aps">
-              <h2>Andra Person Singular</h2>
-              <div className="project-image">
-                <img src="assets/aps/aps_love.jpg" alt="Från föreställningen APS" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/umanista">
-              <h2>Umanista</h2>
-              <div className="project-image">
-                <img src="assets/umanista/umanista.png" alt="Screenshot of webpage" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/linguistic-landscape">
-              <h2>The Language of Place-making</h2>
-              <div className="project-image">
-                <img src="assets/linguistic-landscape/LL-screenshot.png" alt="Screenshot of GIS-application of data in Umeå" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/dialectical-imaginaries">
-              <h2>Dialectical Imaginaries</h2>
-              <div className="project-image">
-                <img src="assets/dialectical-imaginaries/di.png" alt="Screenshot of webpage" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/going-beyond-search">
-              <h2>Going beyond search</h2>
-              <div className="project-image">
-                <img src="assets/going-beyond-search/kuber2.png" alt="Screenshot of webpage" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/tcoir">
-              <h2>The Culture of International Society</h2>
-              <div className="project-image">
-                <img src="assets/tcoir/tcoir.png" alt="Screenshot of webpage" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/digital-periegesis">
-              <h2>Digital Periegesis</h2>
-              <div className="project-image">
-                <img src="assets/digital-periegesis/digital-periegesis.png" alt="Screenshot of map" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/melody">
-              <h2>Melody</h2>
-              <div className="project-image">
-                <img src="assets/melody/melody.png" alt="Melody screenshot of webpage" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/iaccept">
-              <h2>iAccept</h2>
-              <div className="project-image">
-                <img src="assets/iaccept/iaccept.jpg" alt="Screenshot of webpage" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/rave">
-              <h2>RAVE & C-RAVE</h2>
-              <div className="project-image">
-                <img src="assets/rave+c-rave/rave.png" alt="Screenshot of Rave webpage" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/digitalamodeller">
-              <h2>Digitala modeller</h2>
-              <div className="project-image">
-                <img src="assets/digitalamodeller/model3.png" alt="Wooden tool" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/enida">
-              <h2>ENIDA</h2>
-              <div className="project-image">
-                <img src="assets/enida/enida-screenshot-1.png" alt="Screenshot from application of ENIDA" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/yrkesrum">
-              <h2>Yrkesrum</h2>
-              <div className="project-image">
-                <img src="assets/yrkesrum/yrkesrum1.png" alt="Screenshot of network within application" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/utopia">
-              <h2>Utopia</h2>
-              <div className="project-image">
-                <img src="assets/utopia/1.png" alt="Screenshot from game" />
-              </div>
-            </Link>
-          </div>
-
-          <div className="project-tile">
-            <Link to="/staden">
-              <h2>Staden</h2>
-              <div className="project-image">
-                <img src="assets/staden-screenshot-1.png" alt="Screenshot of application" />
-              </div>
-            </Link>
-          </div>
-
         </div>;
 }
 
@@ -277,11 +199,13 @@ function App() {
       <div className="App">
         <div id="main-container">
 
+        { /* 
           <div id="banner">
             <h1>Humlab Showcase</h1>
           </div>
+          */ }
 
-          <div id="main-lower">
+          <div id="content-container">
             { /* <div id="bg1" class="parallax-bg"></div>
             <div id="bg2" class="parallax-bg"></div>
             <div id="bg3" class="parallax-bg"></div> */ }
