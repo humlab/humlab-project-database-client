@@ -95,14 +95,15 @@ h1 {
 
 #main-gallery-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 320px));
   justify-content: center;
   align-items: center;
-  gap: 6rem;
-  row-gap: 8rem;
+  column-gap: 2rem;
+  row-gap: 4rem;
   margin: 0 auto;
+  margin-bottom: 5em;
   padding: 1rem;
-  width: 70vw;
+  width: 80vw;
 }
 
 .project-tile {
@@ -114,28 +115,32 @@ h1 {
   padding: 0;
   box-shadow: 0 0 30px 10px rgba(0,128,128,0.5);
   border: 2px solid #fff;
-
+  
   background-color: rgba(255, 255, 255, 0.5);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  
 }
 
 .project-tile-link {
+  position: relative;
   text-decoration: none;
+  max-width: 300px;
+  max-height: 300px;
+  justify-self: center;
 }
 
-.project-tile h2 {
+.project-tile-link h2 {
   position: absolute;
-  top: -1.5em;
-  left: .1em;
+  top: -2em;
   font-size: 1.5em;
   margin: 0;
   color: #fff;
   text-shadow: 2px 0px 5px rgba(0,128,128, 1.0);
-  width: auto;
   border-radius:1em;
-  white-space: nowrap;
+  max-width: 300px;
+  margin-bottom: 0.5em;
 }
 
 .project-tile:hover {
