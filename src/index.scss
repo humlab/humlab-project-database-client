@@ -79,6 +79,7 @@ h1 {
 #content-container {
   position: relative;
   padding-top: 4em;
+  padding-bottom: 4em;
   //background-image: url('../public/assets/gfx/BG.svg');
   overflow: hidden;
   z-index: 0;
@@ -99,9 +100,8 @@ h1 {
   justify-content: center;
   align-items: center;
   column-gap: 2rem;
-  row-gap: 4rem;
+  row-gap: 8rem;
   margin: 0 auto;
-  margin-bottom: 5em;
   padding: 1rem;
   width: 80vw;
 }
@@ -133,18 +133,96 @@ h1 {
 
 .project-tile-link h2 {
   position: absolute;
-  top: -2em;
+  top: -3em;
   font-size: 1.5em;
   margin: 0;
   color: #fff;
   text-shadow: 2px 0px 5px rgba(0,128,128, 1.0);
-  border-radius:1em;
   max-width: 300px;
   margin-bottom: 0.5em;
+  height: 2.5em;
+  display: flex;
+  align-items: flex-end;
 }
 
-.project-tile:hover {
-  cursor: pointer;
-  transform: translateY(-10px);
-  transition: transform 0.1s;
+
+
+
+/* 1) The “3D viewing area” */
+.scene {
+  width: 300px;
+  height: 300px;
+  perspective: 800px; /* This creates the 3D perspective */
 }
+
+/* 2) The cube itself */
+.cube {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;    /* Allow children to be placed in 3D */
+  transition: transform .3s ease;   /* Smooth rotation transition */
+  transform: translateZ(-150px);   /* Center the cube so rotation looks natural */
+}
+
+/* 3) Rotate the cube on hover */
+.scene:hover .cube {
+  transform: 
+    translateZ(-150px)        /* Keep it centered */
+    rotateY(-90deg);           /* Rotate around Y axis */
+}
+
+/* 4) The faces */
+.face {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+  font: 700 1rem sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden; /* Avoid “mirroring” text when face is turned */
+}
+
+/* 5) Position each face in 3D space */
+.face--front {
+  background: teal;
+  transform: rotateY(0deg) translateZ(150px);
+  background: transparent;
+}
+
+.face--back {
+  background: crimson;
+  transform: rotateY(180deg) translateZ(150px);
+}
+
+.face--right {
+  background: #fff;
+  color: #000;
+  transform: rotateY(90deg) translateZ(150px);
+  padding: 1em;
+  overflow: hidden;
+}
+
+.face--right .fa {
+  font-size: 14em;
+  color: #666;
+}
+
+.face--left {
+  background: blueviolet;
+  transform: rotateY(-90deg) translateZ(150px);
+}
+
+.face--top {
+  background: darkgreen;
+  transform: rotateX(90deg) translateZ(150px);
+}
+
+.face--bottom {
+  background: orange;
+  transform: rotateX(-90deg) translateZ(150px);
+}
+
