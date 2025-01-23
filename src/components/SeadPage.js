@@ -37,7 +37,7 @@ function SeadPage() {
         <SwiperSlide>
         <div className="slide-content">
             <img src="../assets/sead/sead-screen-small.png" alt="Database structure" />
-            <div className="overlay-text">A screenshot of SEAD's primary user interface</div>
+            <div className="overlay-text">A screenshot of SEAD's user interface</div>
         </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -98,13 +98,13 @@ function SeadPage() {
 
       <div className="info-box cooperation">
         <h3>In Cooperation With</h3>
-        <a href="https://www.umu.se/forskning/infrastruktur/mal/" target="_blank" ><p>The Environmental Archaeology Laboratory (MAL) @ UMU</p></a>
+        <a href="https://www.umu.se/forskning/infrastruktur/mal/" target="_blank" rel="noreferrer"><p>The Environmental Archaeology Laboratory (MAL) @ UMU</p></a>
       </div>
 
       <div className="info-box financier">
         <h3>Financier</h3>
-        <div><img src="../assets/vr.png" /></div>
-        <div><img src="../assets/umu-logo-EN.png" /></div>
+        <div><img src="../assets/vr.png" alt="Vetenskapsrådet logo" /></div>
+        <div><img src="../assets/umu-logo-EN.png" alt="Umeå university logo" /></div>
       </div>
     </div>
   );

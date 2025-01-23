@@ -1,16 +1,17 @@
-import logo from './logo.svg';
 import './App.scss';
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; // Make sure Router is imported
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom'; // Make sure Router is imported
 import QueerAIPage from './components/QueerAIPage';
 import SeadPage from './components/SeadPage';
 import VispPage from './components/VispPage';
+import ProjectPage from './components/ProjectPage';
 import "font-awesome/css/font-awesome.min.css";
 
 function GalleryPage() {
   
   return <div>
           <h1>Humlab Showcase</h1>
+          <h4>A showcase of current and completed projects at Humlab, Umeå University</h4>
           <div id="main-gallery-container">
 
           <Link to="/sead" className="project-tile-link">
@@ -351,6 +352,9 @@ function GalleryPage() {
           </Link>
 
               </div>
+
+          
+
         </div>;
 }
 
@@ -390,29 +394,35 @@ function App() {
   }, []);
   */
 
+  const DynamicProjectPage = () => {
+    const { projectName } = useParams();
+    const endpoint = `http://localhost:3100/project/${projectName}`;
+    return <ProjectPage endpoint={endpoint} />;
+  };
+
   return (
     <Router> {/* Wrap the app inside Router */}
       <div className="App">
         <div id="main-container">
-
-        { /* 
-          <div id="banner">
-            <h1>Humlab Showcase</h1>
-          </div>
-          */ }
 
           <div id="content-container">
             { /* <div id="bg1" class="parallax-bg"></div>
             <div id="bg2" class="parallax-bg"></div>
             <div id="bg3" class="parallax-bg"></div> */ }
             
-            
             <Routes>
               <Route path="/" element={<GalleryPage />} />
-              <Route path="/queer-ai" element={<QueerAIPage />} />
-              <Route path="/sead" element={<SeadPage />} />
-              <Route path="/visp" element={<VispPage />} />
+              <Route path="/sead" element={<ProjectPage endpoint={"http://localhost:3100/project/sead"} />} />
+              <Route path="/:projectName" element={<DynamicProjectPage />} />
             </Routes>
+
+
+            <div id="footer">
+              <a href="https://www.umu.se/en/humlab/" target="_blank" rel="noreferrer">
+                <img id="humlab-umu-logo" src="./assets/humlab_logo_neg_en_small.png" alt="Humlab logotype" />
+              </a>
+            </div>
+
           </div>
           
 
