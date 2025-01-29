@@ -117,6 +117,8 @@ function App() {
               <Route path="/" element={<GalleryPage />} />
               <Route path="/sead" element={<ProjectPage endpoint={"http://localhost:3100/project/sead"} />} />
               <Route path="/:projectName" element={<DynamicProjectPage />} />
+              <Route path="/sead" element={<ProjectPage endpoint={"http://localhost:3100/project/sead"} />} />
+              <Route path="/:projectName" element={<DynamicProjectPage />} />
             </Routes>
 
             <div id="footer">
