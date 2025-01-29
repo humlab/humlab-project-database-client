@@ -1,0 +1,10 @@
+.gallery-button-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 15px);
+    gap: 5px;
+}
+
+.gallery-button-grid-container i {
+    display: inline-block;
+}
+  

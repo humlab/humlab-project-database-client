@@ -73,12 +73,12 @@ function VispPage() {
       {/* Explore Application Buttons */}
       <a
         className="button"
-        style={{ gridColumn: 'span 6' }}
+        style={{ gridColumn: 'span 12' }}
         href="https://visp.humlab.umu.se"
         target="_blank"
         rel="noreferrer"
       >
-        VISP Platform
+        Go to the VISP system
       </a>
 
       {/* Info Boxes: People, Cooperation, Financier */}
