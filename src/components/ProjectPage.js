@@ -8,6 +8,12 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
+import GalleryButton from './GalleryButton';
+
+
 function ProjectPage({ endpoint }) {
     const [projectData, setProjectData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -35,26 +41,53 @@ function ProjectPage({ endpoint }) {
         fetchData();
     }, [endpoint]);
 
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div>Error: {error}</div>;
+    if (loading) return <div className='loading-status-text'>Loading...</div>;
+    if (error) return <div className='loading-status-text'>
+        Error: {error}<br /><br />
+        Please email support@humlab.umu.se
+        </div>;
 
     const {
         title,
+        subtitle,
         description,
         images,
         pullQuote,
         longText,
         links,
         people,
-        cooperation,
+        cooperation_partners,
         financier,
     } = projectData;
 
+
+    const handleMouseEnter = (event) => {
+        gsap.to(event.currentTarget, {
+            scale: 1.05, // Slightly enlarges the box
+            boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)", // Adds depth
+            duration: 0.3,
+            ease: "power2.out",
+        });
+    };
+
+    const handleMouseLeave = (event) => {
+        gsap.to(event.currentTarget, {
+            scale: 1,
+            boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.15)", // Back to normal
+            duration: 0.3,
+            ease: "power2.inOut",
+        });
+    };
+
     return (
         <div className="project-page-container">
+            <a href="/" id="gallery-button">
+                <GalleryButton />
+            </a>
             {/* Project/Page Title */}
             <div className="page-title">
                 <h1>{title}</h1>
+                <h2>{subtitle}</h2>
             </div>
 
             {/* Image Carousel */}
@@ -120,38 +153,94 @@ function ProjectPage({ endpoint }) {
             {/* Info Boxes */}
             {people && people.length > 0 && (
                 <div className="info-box people">
-                    <h3>People</h3>
+                    <h3>Whom To Blame</h3>
                     <ul>
                         {people.map((person, index) => (
                             <li key={index}>
-                                <a href={person.link}>{person.name}</a>
+                                <a href={person.link}>
+                                    <div className="info-box-content profile-container"
+                                    onMouseEnter={handleMouseEnter}
+                                    onMouseLeave={handleMouseLeave}
+                                    >
+
+                                        {person.profileImage ? (
+                                            <div className="profile-image-container">
+                                                <img
+                                                    src={person.profileImage}
+                                                    alt={`${person.name}'s profile`}
+                                                    className="profile-image"
+                                                />
+                                            </div>
+                                        ) : (
+                                            <div className="profile-image-container">
+                                                <i className="fa fa-user-circle"></i>
+                                            </div>
+                                        )}
+                                        {person.name}
+                                        
+                                    </div>
+                                </a>
                             </li>
                         ))}
                     </ul>
                 </div>
             )}
 
-            {cooperation && (
+            {cooperation_partners && (
                 <div className="info-box cooperation">
                     <h3>In Cooperation With</h3>
-                    <a href={cooperation.link} target="_blank" rel="noreferrer">
-                        <p>{cooperation.name}</p>
-                    </a>
+                    {cooperation_partners.map((item, index) => (
+                        <a href={item.link} key={index} target="_blank" rel="noreferrer">
+                            <div
+                                className="info-box-content org-container"
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}
+                            >
+                                <div className="org-image-container">
+                                    {item.logo ? (
+                                        <img
+                                            src={item.logo}
+                                            alt={item.name}
+                                            className="org-image"
+                                        />
+                                    ) : (
+                                        <span className="org-name">{item.name}</span>
+                                    )}
+                                </div>
+                            </div>
+                        </a>
+                    ))}
                 </div>
             )}
+
 
             {financier && financier.length > 0 && (
                 <div className="info-box financier">
                     <h3>Financiers</h3>
                     {financier.map((item, index) => (
-                        <div key={index}>
-                            <a href={item.url} target="_blank" rel="noreferrer">
-                                <img src={item.logo} alt={item.name} />
-                            </a>
-                        </div>
+                        <a href={item.link} key={index} target="_blank" rel="noreferrer">
+                            <div
+                                className="info-box-content org-container"
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}
+                            >
+                                <div className="org-image-container">
+                                    {item.logo ? (
+                                        <img
+                                            src={item.logo}
+                                            alt={item.name}
+                                            className="org-image"
+                                        />
+                                    ) : (
+                                        <span className="org-name">{item.name}</span>
+                                    )}
+                                </div>
+                            </div>
+                        </a>
                     ))}
                 </div>
             )}
+
         </div>
     );
 }
