@@ -10,6 +10,6 @@ export default defineConfig({
   },
   server: {
     historyApiFallback: true,
-    allowedHosts: 'all',
+    allowedHosts: 'showcase.betty.humlab.umu.se',
   }
 });
