@@ -1,0 +1,42 @@
+{
+  "slug": "utb-plagiat",
+  "title": "Nätutbildning om plagiat",
+  "year": "2022",
+  "description": {
+    "html": "<span class=\"sv\">N&#xe4;tutbildning om plagiat: En universitets&#xf6;vergripande, \n                    SCORM-paketerad utbildning om plagiat med syfte att informera, \n                    utbilda och certifiera studenter i Canvas.</span>\n                <br><br>\n                The plagiarism project will produce an eLearning compliance training which \n                is made in a multi-modal format (that is, with video, audio, images, text \n                and interactive exercises). Students will become thoroughly acquainted with \n                what is and what is not plagiarism. The burden of informing students about \n                plagiarism will be lifted from the individual tutor ensuring that all students \n                will get the same input. Students can focus on their own academic writing in \n                full knowledge that they have certified their understanding and training about Plagiarism.",
+    "text": "Nätutbildning om plagiat: En universitetsövergripande, SCORM-paketerad utbildning om plagiat med syfte att informera, utbilda och certifiera studenter i Canvas. The plagiarism project will produce an eLearning compliance training which is made in a multi-modal format (that is, with video, audio, images, text and interactive exercises). Students will become thoroughly acquainted with what is and what is not plagiarism. The burden of informing students about plagiarism will be lifted from the individual tutor ensuring that all students will get the same input. Students can focus on their own academic writing in full knowledge that they have certified their understanding and training about Plagiarism.",
+    "sv_text": "Nätutbildning om plagiat: En universitetsövergripande, SCORM-paketerad utbildning om plagiat med syfte att informera, utbilda och certifiera studenter i Canvas.",
+    "en_text": "The plagiarism project will produce an eLearning compliance training which is made in a multi-modal format (that is, with video, audio, images, text and interactive exercises). Students will become thoroughly acquainted with what is and what is not plagiarism. The burden of informing students about plagiarism will be lifted from the individual tutor ensuring that all students will get the same input. Students can focus on their own academic writing in full knowledge that they have certified their understanding and training about Plagiarism.",
+    "links": []
+  },
+  "explore_button": null,
+  "people_humlab": [
+    {
+      "name": "Satish Strömberg",
+      "href": "https://www.umu.se/personal/satish-stromberg/"
+    }
+  ],
+  "people_previous": [],
+  "cooperation": [
+    "Elena Lindholm",
+    "Institutionen för språkstudier"
+  ],
+  "financiers": [],
+  "tags": [],
+  "images": [],
+  "info_boxes": [],
+  "videos": [
+    {
+      "src": "https://api.kaltura.nordu.net/p/296/sp/29600/embedIframeJs/uiconf_id/23449664/partner_id/296?iframeembed=true&playerId=kaltura_player&entry_id=0_ay3ltq4u&flashvars[streamerType]=auto&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=0_cy7nzf4e",
+      "title": "Plagiarisn-humlab"
+    }
+  ],
+  "all_links": [
+    {
+      "href": "https://www.umu.se/personal/satish-stromberg/",
+      "text": "Satish Strömberg",
+      "class": null
+    }
+  ],
+  "copied_images": []
+}

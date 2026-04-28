@@ -1,0 +1,129 @@
+{
+  "slug": "digital-periegesis",
+  "title": "The digital Periegesis tracing the places of ancient Greece and the stories associated with them",
+  "year": "2018–2021",
+  "description": {
+    "html": "<span class=\"sv\">Detta forskningsprojekt avser att studera migration, samh&#xe4;llsomvandling och kris i Europa genom \n                    ett digitalt och antikt prisma. Specifikt digitaliseras den grekiska geografen Pausanias arbete \n                    Periegesis Hellados (Beskrivning av Grekland). Periegesis &#xe4;r en reseguide fr&#xe5;n 100-talet e.kr. \n                    f&#xf6;r helleniska platser under romerskt herrav&#xe4;lde. Projektet skapar en digital karta och ett \n                    geografiskt informationssystem &#xf6;ver Pausanias Grekland. </span>\n                <br><br>\n                In this project we aim to trace, map and analyse Pausanias&apos;s spatial (re)imagining of Greece: \n                both his representation of the (human) geography of Greece and the spatial structure, or place-boundedness, of his text. \n                This is to identify and reflect on not only how Pausanias describes places and objects within them, but also the \n                spatial organisation of his narrative&#x2014;how he relates places to each other. <br>\n                Pausanias doesn&apos;t simply move through space as if following a route, as he describes (and reinscribes) the layout of \n                ancient sites or locates objects (temples, statues) in situ; he also relates places or objects to others in far-flung locations \n                of the Mediterranean. And, further: he moves through time, as he attributes to those sites or objects (hi)stories of their construction, \n                reimagination or demise. Precisely because issues of space, time and identity are so bound up with each other in the Periegesis, \n                it is impossible to map this narrative by conventional means.\n                <br><br>Read more at <a href=\"http://periegesis.org/\" target=\"_blank\">http://periegesis.org/</a>",
+    "text": "Detta forskningsprojekt avser att studera migration, samhällsomvandling och kris i Europa genom ett digitalt och antikt prisma. Specifikt digitaliseras den grekiska geografen Pausanias arbete Periegesis Hellados (Beskrivning av Grekland). Periegesis är en reseguide från 100-talet e.kr. för helleniska platser under romerskt herravälde. Projektet skapar en digital karta och ett geografiskt informationssystem över Pausanias Grekland. In this project we aim to trace, map and analyse Pausanias's spatial (re)imagining of Greece: both his representation of the (human) geography of Greece and the spatial structure, or place-boundedness, of his text. This is to identify and reflect on not only how Pausanias describes places and objects within them, but also the spatial organisation of his narrative—how he relates places to each other. Pausanias doesn't simply move through space as if following a route, as he describes (and reinscribes) the layout of ancient sites or locates objects (temples, statues) in situ; he also relates places or objects to others in far-flung locations of the Mediterranean. And, further: he moves through time, as he attributes to those sites or objects (hi)stories of their construction, reimagination or demise. Precisely because issues of space, time and identity are so bound up with each other in the Periegesis, it is impossible to map this narrative by conventional means. Read more at http://periegesis.org/",
+    "sv_text": "Detta forskningsprojekt avser att studera migration, samhällsomvandling och kris i Europa genom ett digitalt och antikt prisma. Specifikt digitaliseras den grekiska geografen Pausanias arbete Periegesis Hellados (Beskrivning av Grekland). Periegesis är en reseguide från 100-talet e.kr. för helleniska platser under romerskt herravälde. Projektet skapar en digital karta och ett geografiskt informationssystem över Pausanias Grekland.",
+    "en_text": "In this project we aim to trace, map and analyse Pausanias's spatial (re)imagining of Greece: both his representation of the (human) geography of Greece and the spatial structure, or place-boundedness, of his text. This is to identify and reflect on not only how Pausanias describes places and objects within them, but also the spatial organisation of his narrative—how he relates places to each other. Pausanias doesn't simply move through space as if following a route, as he describes (and reinscribes) the layout of ancient sites or locates objects (temples, statues) in situ; he also relates places or objects to others in far-flung locations of the Mediterranean. And, further: he moves through time, as he attributes to those sites or objects (hi)stories of their construction, reimagination or demise. Precisely because issues of space, time and identity are so bound up with each other in the Periegesis, it is impossible to map this narrative by conventional means. Read more at http://periegesis.org/",
+    "links": [
+      {
+        "href": "http://periegesis.org/",
+        "text": "http://periegesis.org/",
+        "class": null
+      }
+    ]
+  },
+  "explore_button": {
+    "text": "Explore Application ▶",
+    "href": "https://gis.periegesis.org/"
+  },
+  "people_humlab": [
+    {
+      "name": "Kajsa Palm",
+      "href": "https://www.umu.se/personal/kajsa-palm/"
+    }
+  ],
+  "people_previous": [
+    {
+      "name": "Anna Foka",
+      "href": null
+    },
+    {
+      "name": "Filip Allberg",
+      "href": null
+    },
+    {
+      "name": "Cenk Demiroglu",
+      "href": "https://www.umu.se/personal/cenk-demiroglu/"
+    }
+  ],
+  "cooperation": [
+    "Anna Foka",
+    "Elton Barker",
+    "Brady Kiesling",
+    "Kyriaki Konstantinidou",
+    "Linda Talatas",
+    "Nasrin Mostofian",
+    "David McMeekin",
+    "Uppsala University"
+  ],
+  "financiers": [
+    {
+      "src": "assets/stiftelsenMAWM-logo.svgz",
+      "alt": "Stiftelsen Marcus och Amalia Wallenbergs Minnesfond logo",
+      "href": "https://maw.wallenberg.org/"
+    }
+  ],
+  "tags": [],
+  "images": [
+    {
+      "src": "assets/digital-periegesis/digital-periegesis2.png",
+      "alt": "ArcGIS application showing map of Greece",
+      "caption": "ArcGIS application showing map of Greece",
+      "location": "left-container"
+    },
+    {
+      "src": "assets/digital-periegesis/digital-periegesis.png",
+      "alt": "ArcGIS application showing a map of the roman empire",
+      "caption": "ArcGIS application showing a map of the roman empire",
+      "location": "right-container"
+    },
+    {
+      "src": "assets/digital-periegesis/digital-periegesis-icons.png",
+      "alt": "Symbology for ArcGIS application",
+      "caption": "Symbology created to be used in GIS-application to visualize Pausanias movement",
+      "location": "right-container"
+    }
+  ],
+  "info_boxes": [
+    "Building on the digitisation efforts of other initiatives, specifically the Perseus Classical Library and Pelagios, we use the web-based platform Recogito to annotate (i.e. make notes on) Pausanias's text directly, thereby essentially treating the text itself as a database."
+  ],
+  "videos": [],
+  "all_links": [
+    {
+      "href": "http://periegesis.org/",
+      "text": "http://periegesis.org/",
+      "class": null
+    },
+    {
+      "href": "https://gis.periegesis.org/",
+      "text": "Explore Application ▶",
+      "class": "explore-button"
+    },
+    {
+      "href": "https://www.umu.se/personal/kajsa-palm/",
+      "text": "Kajsa Palm",
+      "class": null
+    },
+    {
+      "href": "https://www.umu.se/personal/cenk-demiroglu/",
+      "text": "Cenk Demiroglu",
+      "class": null
+    },
+    {
+      "href": "https://maw.wallenberg.org/",
+      "text": null,
+      "class": null
+    }
+  ],
+  "copied_images": [
+    {
+      "original_src": "assets/digital-periegesis/digital-periegesis2.png",
+      "local_path": "images/digital-periegesis/digital-periegesis2.png"
+    },
+    {
+      "original_src": "assets/digital-periegesis/digital-periegesis.png",
+      "local_path": "images/digital-periegesis/digital-periegesis.png"
+    },
+    {
+      "original_src": "assets/digital-periegesis/digital-periegesis-icons.png",
+      "local_path": "images/digital-periegesis/digital-periegesis-icons.png"
+    },
+    {
+      "original_src": "assets/stiftelsenMAWM-logo.svgz",
+      "local_path": "images/stiftelsenMAWM-logo.svgz"
+    }
+  ]
+}

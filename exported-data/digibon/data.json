@@ -1,0 +1,100 @@
+{
+  "slug": "digibon",
+  "title": "DigiBön",
+  "year": null,
+  "description": {
+    "html": "En digital karta &#xf6;ver Lule&#xe5; stifts kyrkor och b&#xf6;nhus belyser \n                stiftets religi&#xf6;sa geografi genom att visa kyrkors och samfunds \n                lokaler i tid och rum. Lokalernas utbredning inbegriper framf&#xf6;r \n                allt delar av kustlandet i V&#xe4;sterbottens och Norrbottens l&#xe4;n samt \n                Tornedalen, omr&#xe5;den som dessutom har lite olika religi&#xf6;s karakt&#xe4;r.\n                <br><span class=\"sv\">Kartan &#xe4;r fortfarande under utveckling och kvaliteten \n                i underliggande data kommer att kontrolleras vartefter.</span>\n                <br><br>L&#xe4;s mer om \n                <a href=\"https://www.umu.se/nyheter/digital-karta-over-bonhus-visar-norrlandskt-bibelbalte_11671542/\" target=\"_blank\">projektet</a>",
+    "text": "En digital karta över Luleå stifts kyrkor och bönhus belyser stiftets religiösa geografi genom att visa kyrkors och samfunds lokaler i tid och rum. Lokalernas utbredning inbegriper framför allt delar av kustlandet i Västerbottens och Norrbottens län samt Tornedalen, områden som dessutom har lite olika religiös karaktär. Kartan är fortfarande under utveckling och kvaliteten i underliggande data kommer att kontrolleras vartefter. Läs mer om projektet",
+    "sv_text": "Kartan är fortfarande under utveckling och kvaliteten i underliggande data kommer att kontrolleras vartefter.",
+    "en_text": "En digital karta över Luleå stifts kyrkor och bönhus belyser stiftets religiösa geografi genom att visa kyrkors och samfunds lokaler i tid och rum. Lokalernas utbredning inbegriper framför allt delar av kustlandet i Västerbottens och Norrbottens län samt Tornedalen, områden som dessutom har lite olika religiös karaktär. Läs mer om projektet",
+    "links": [
+      {
+        "href": "https://www.umu.se/nyheter/digital-karta-over-bonhus-visar-norrlandskt-bibelbalte_11671542/",
+        "text": "projektet",
+        "class": null
+      }
+    ]
+  },
+  "explore_button": {
+    "text": "Testa Applikationen ▶",
+    "href": "http://digibon.humlab.umu.se"
+  },
+  "people_humlab": [
+    {
+      "name": "Kajsa Palm",
+      "href": "https://www.umu.se/personal/kajsa-palm/"
+    }
+  ],
+  "people_previous": [],
+  "cooperation": [
+    "Stefan Gelfgren",
+    "Cenk Demiroglu"
+  ],
+  "financiers": [],
+  "tags": [],
+  "images": [
+    {
+      "src": "assets/digibon/digibon-screenshot.png",
+      "alt": "Skärmklipp av kartan i en ArcGIS online applikation, \n                visar punkter på kartan över olika typer av bönhus",
+      "caption": "Skärmklipp av kartan i en ArcGIS online-applikation",
+      "location": "left-container"
+    },
+    {
+      "src": "assets/digibon/digibon-screenshot-filter.png",
+      "alt": "Applikationskartan visar filtreringsfunktion",
+      "caption": "Skärmklipp av kartan med filteringsmöjlighet",
+      "location": "right-container"
+    },
+    {
+      "src": "assets/digibon/digibon-screenshot-time.png",
+      "alt": "Applikationskartan visar tidsarpekt",
+      "caption": "Skärmklipp av kartan med visualisering av utspridningen av bönhus över tid",
+      "location": "right-container"
+    }
+  ],
+  "info_boxes": [
+    "Kartan baseras på en databas som bygger på bönhusinventeringar som gjorts av Länsstyrelsen i Västerbotten, Skellefteå museum och Norrbottens museum, samt information som Svenska kyrkan har delgett om sina kyrkor och kapell."
+  ],
+  "videos": [],
+  "all_links": [
+    {
+      "href": "https://www.umu.se/nyheter/digital-karta-over-bonhus-visar-norrlandskt-bibelbalte_11671542/",
+      "text": "projektet",
+      "class": null
+    },
+    {
+      "href": "http://digibon.humlab.umu.se",
+      "text": "Testa Applikationen ▶",
+      "class": "explore-button"
+    },
+    {
+      "href": "https://www.umu.se/personal/kajsa-palm/",
+      "text": "Kajsa Palm",
+      "class": null
+    },
+    {
+      "href": "https://www.umu.se/personal/stefan-gelfgren/",
+      "text": "Stefan Gelfgren",
+      "class": null
+    },
+    {
+      "href": "https://www.umu.se/personal/cenk-demiroglu/",
+      "text": "Cenk Demiroglu",
+      "class": null
+    }
+  ],
+  "copied_images": [
+    {
+      "original_src": "assets/digibon/digibon-screenshot.png",
+      "local_path": "images/digibon/digibon-screenshot.png"
+    },
+    {
+      "original_src": "assets/digibon/digibon-screenshot-filter.png",
+      "local_path": "images/digibon/digibon-screenshot-filter.png"
+    },
+    {
+      "original_src": "assets/digibon/digibon-screenshot-time.png",
+      "local_path": "images/digibon/digibon-screenshot-time.png"
+    }
+  ]
+}

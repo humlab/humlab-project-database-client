@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Sora:wght@400;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+:root {
+  color-scheme: dark;
+  font-family: 'Sora', 'Avenir Next', 'Segoe UI', sans-serif;
+}
+
+:root,
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  font-family: 'Sora', 'Avenir Next', 'Segoe UI', sans-serif;
+  --app-background:
+    radial-gradient(1400px 900px at 20% -10%, #1a3f46 0%, #0a1418 48%),
+    radial-gradient(1200px 900px at 100% 20%, #362018 0%, transparent 45%),
+    #091116;
+  --text-main: #f0f5f7;
+  --text-strong: rgba(252, 252, 249, 0.98);
+  --text-body: rgba(230, 243, 246, 0.92);
+  --text-muted: rgba(223, 240, 242, 0.74);
+  --text-soft: rgba(237, 246, 248, 0.94);
+  --surface-hero: linear-gradient(145deg, rgba(13, 33, 40, 0.9), rgba(10, 22, 27, 0.85));
+  --surface-input: rgba(12, 26, 31, 0.84);
+  --surface-chip: rgba(255, 255, 255, 0.08);
+  --surface-skeleton: linear-gradient(110deg, rgba(12, 27, 32, 0.9), rgba(14, 34, 41, 0.9), rgba(12, 27, 32, 0.9));
+  --surface-state: rgba(10, 22, 27, 0.82);
+  --border-soft: rgba(255, 255, 255, 0.16);
+  --border-mid: rgba(255, 255, 255, 0.18);
+  --border-strong: rgba(255, 255, 255, 0.2);
+  --accent-warm: rgb(255, 201, 156);
+  --accent-border: rgba(255, 171, 126, 0.56);
+  --accent-link: rgb(121, 241, 222);
+  --ambient-left: #2ea8a5;
+  --ambient-right: #ff8f5c;
+  --shadow-hero: 0 20px 50px rgba(0, 0, 0, 0.26);
+  --shadow-card-hover: 0 18px 42px rgba(0, 0, 0, 0.34);
+  --shadow-modal: 0 40px 80px rgba(0, 0, 0, 0.42);
+  --overlay-bg: rgba(3, 8, 10, 0.75);
+  --modal-panel-bg: linear-gradient(160deg, rgba(16, 33, 38, 0.96), rgba(9, 20, 24, 0.96));
+  --modal-close-bg: rgba(12, 24, 28, 0.95);
+  --card-bg: linear-gradient(150deg, rgba(14, 33, 40, 0.92), rgba(9, 22, 27, 0.88));
+  --card-media-bg: linear-gradient(130deg, rgba(254, 174, 102, 0.14), rgba(84, 210, 210, 0.12));
+  --quote-bg: rgba(255, 157, 107, 0.1);
+  --quote-border: rgba(255, 159, 112, 0.95);
+  --modal-section-bg: rgba(10, 21, 25, 0.76);
+  --modal-section-bg-2: rgba(11, 23, 27, 0.76);
+  --media-bg: rgba(8, 17, 20, 0.8);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --app-background:
+    radial-gradient(1400px 900px at 20% -10%, #cde8e5 0%, #f7fbfc 48%),
+    radial-gradient(1200px 900px at 100% 20%, #ffe5d7 0%, transparent 45%),
+    #f6fbfc;
+  --text-main: #18282f;
+  --text-strong: #1d272d;
+  --text-body: rgba(24, 40, 47, 0.92);
+  --text-muted: rgba(33, 64, 74, 0.66);
+  --text-soft: rgba(25, 42, 50, 0.95);
+  --surface-hero: linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(240, 248, 250, 0.92));
+  --surface-input: rgba(255, 255, 255, 0.95);
+  --surface-chip: rgba(13, 34, 41, 0.06);
+  --surface-skeleton: linear-gradient(110deg, rgba(236, 245, 247, 0.94), rgba(224, 237, 241, 0.95), rgba(236, 245, 247, 0.94));
+  --surface-state: rgba(248, 252, 253, 0.94);
+  --border-soft: rgba(16, 45, 55, 0.16);
+  --border-mid: rgba(16, 45, 55, 0.2);
+  --border-strong: rgba(16, 45, 55, 0.24);
+  --accent-warm: #cf6e34;
+  --accent-border: rgba(207, 110, 52, 0.58);
+  --accent-link: #007e8e;
+  --ambient-left: #72c9c0;
+  --ambient-right: #f4b083;
+  --shadow-hero: 0 20px 44px rgba(26, 49, 61, 0.16);
+  --shadow-card-hover: 0 18px 38px rgba(26, 49, 61, 0.18);
+  --shadow-modal: 0 40px 70px rgba(26, 49, 61, 0.2);
+  --overlay-bg: rgba(208, 222, 226, 0.66);
+  --modal-panel-bg: linear-gradient(160deg, rgba(255, 255, 255, 0.97), rgba(241, 248, 250, 0.95));
+  --modal-close-bg: rgba(245, 251, 252, 0.96);
+  --card-bg: linear-gradient(150deg, rgba(255, 255, 255, 0.96), rgba(241, 248, 250, 0.94));
+  --card-media-bg: linear-gradient(130deg, rgba(255, 180, 131, 0.18), rgba(115, 202, 200, 0.2));
+  --quote-bg: rgba(255, 157, 107, 0.14);
+  --quote-border: rgba(214, 102, 38, 0.86);
+  --modal-section-bg: rgba(244, 250, 252, 0.9);
+  --modal-section-bg-2: rgba(238, 247, 250, 0.92);
+  --media-bg: rgba(235, 245, 248, 0.96);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--app-background);
+  color: var(--text-main);
+  transition: background 220ms ease, color 220ms ease;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}

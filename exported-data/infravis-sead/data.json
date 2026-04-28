@@ -1,0 +1,129 @@
+{
+  "slug": "infravis-sead",
+  "title": "SEAD Conservation Paleobiology",
+  "year": null,
+  "description": {
+    "html": "<span class=\"sv\">Infravis pilotprojekt av SEAD BugsCEP ecocodes visualiserade p&#xe5; tv&#xe5; olika s&#xe4;tt. \n                    Genom ArcGIS men ocks&#xe5; ur ett mer konstn&#xe4;rligt perspektiv. \n                </span>\n                <br><br>\n                This is an Infravis pilot project that will demonstrate the availability of a long-term record of biodiverity data, from the SEAD database,\n                which could be used to understand the biodiverity implications of the current climate and extinction crisis.\n                <br><br>\n                The project will create an online ArcGIS app using a space-time pattern mining methodology for an interactive visualization of\n                changes in insect biodiverity, and its environmental implicaions, over space and time. \n                <!-- <br/><br/><a href=\"https://\" target=\"_blank\">Read more</a> -->",
+    "text": "Infravis pilotprojekt av SEAD BugsCEP ecocodes visualiserade på två olika sätt. Genom ArcGIS men också ur ett mer konstnärligt perspektiv. This is an Infravis pilot project that will demonstrate the availability of a long-term record of biodiverity data, from the SEAD database, which could be used to understand the biodiverity implications of the current climate and extinction crisis. The project will create an online ArcGIS app using a space-time pattern mining methodology for an interactive visualization of changes in insect biodiverity, and its environmental implicaions, over space and time.",
+    "sv_text": "Infravis pilotprojekt av SEAD BugsCEP ecocodes visualiserade på två olika sätt. Genom ArcGIS men också ur ett mer konstnärligt perspektiv.",
+    "en_text": "This is an Infravis pilot project that will demonstrate the availability of a long-term record of biodiverity data, from the SEAD database, which could be used to understand the biodiverity implications of the current climate and extinction crisis. The project will create an online ArcGIS app using a space-time pattern mining methodology for an interactive visualization of changes in insect biodiverity, and its environmental implicaions, over space and time.",
+    "links": []
+  },
+  "explore_button": null,
+  "people_humlab": [
+    {
+      "name": "Carl-Erik Engqvist",
+      "href": "https://www.umu.se/personal/carl-erik-engqvist/"
+    },
+    {
+      "name": "Johan von Boer",
+      "href": "https://www.umu.se/personal/johan-von-boer/"
+    },
+    {
+      "name": "Kajsa Palm",
+      "href": "https://www.umu.se/personal/kajsa-palm/"
+    },
+    {
+      "name": "Mattis Lindmark",
+      "href": "https://www.umu.se/personal/mattis-lindmark/"
+    },
+    {
+      "name": "Roger Mähler",
+      "href": "https://www.umu.se/personal/roger-mahler/"
+    },
+    {
+      "name": "Marita Nilsson",
+      "href": "https://www.umu.se/personal/marita-nilsson/"
+    }
+  ],
+  "people_previous": [
+    {
+      "name": "Cenk Demiroglu",
+      "href": "https://www.umu.se/personal/cenk-demiroglu/"
+    }
+  ],
+  "cooperation": [
+    "Philip Buckland"
+  ],
+  "financiers": [],
+  "tags": [
+    "Midjourney",
+    "ArcGIS",
+    "Web Development"
+  ],
+  "images": [
+    {
+      "src": "assets/infravis-sead/bugs-treemap.png",
+      "alt": "Tree map of BugsCEP ecocode of a SEAD site",
+      "caption": "Tree map of BugsCEP ecocode of a SEAD site represented by AI generated images",
+      "location": "right-container"
+    },
+    {
+      "src": "assets/infravis-sead/ecobugs.png",
+      "alt": "ArcGIS application of ecocodes",
+      "caption": "ArcGIS application of the SEAD Bugs ecocodes",
+      "location": "right-container"
+    }
+  ],
+  "info_boxes": [
+    "The project also experiments with AI generated images representing SEAD Bugs ecododes in a creative and artistic way."
+  ],
+  "videos": [
+    {
+      "src": "https://demo.humlab.umu.se/seadimagesphere/",
+      "title": "Sead image sphares"
+    }
+  ],
+  "all_links": [
+    {
+      "href": "https://www.umu.se/personal/carl-erik-engqvist/",
+      "text": "Carl-Erik Engqvist",
+      "class": null
+    },
+    {
+      "href": "https://www.umu.se/personal/johan-von-boer/",
+      "text": "Johan von Boer",
+      "class": null
+    },
+    {
+      "href": "https://www.umu.se/personal/kajsa-palm/",
+      "text": "Kajsa Palm",
+      "class": null
+    },
+    {
+      "href": "https://www.umu.se/personal/mattis-lindmark/",
+      "text": "Mattis Lindmark",
+      "class": null
+    },
+    {
+      "href": "https://www.umu.se/personal/roger-mahler/",
+      "text": "Roger Mähler",
+      "class": null
+    },
+    {
+      "href": "https://www.umu.se/personal/marita-nilsson/",
+      "text": "Marita Nilsson",
+      "class": null
+    },
+    {
+      "href": "https://www.umu.se/personal/cenk-demiroglu/",
+      "text": "Cenk Demiroglu",
+      "class": null
+    },
+    {
+      "href": "http://infravis.se/",
+      "text": null,
+      "class": null
+    }
+  ],
+  "copied_images": [
+    {
+      "original_src": "assets/infravis-sead/bugs-treemap.png",
+      "local_path": "images/infravis-sead/bugs-treemap.png"
+    },
+    {
+      "original_src": "assets/infravis-sead/ecobugs.png",
+      "local_path": "images/infravis-sead/ecobugs.png"
+    }
+  ]
+}

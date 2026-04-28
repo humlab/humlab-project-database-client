@@ -1,0 +1,168 @@
+{
+  "slug": "digitalamodeller",
+  "title": "Digitala modeller",
+  "year": "2016–2019",
+  "description": {
+    "html": "<span class=\"sv\">Projektet &#xe4;r ett samarbete mellan Humlab och Tekniska museet i Stockholm. \n                    Med utg&#xe5;ngspunkt i museets samlingar, den digitala teknikens m&#xf6;jligheter och industrialismens \n                    ber&#xe4;ttelser om samh&#xe4;lle, m&#xe4;nniskor och milj&#xf6;er syftar projektet till att fr&#xe5;n tre olika \n                    kulturarvsperspektiv unders&#xf6;ka digitaliseringens specificitet och potential som brygga \n                    mellan forskning, minnesinstitution och bes&#xf6;kare. F&#xf6;rem&#xe5;l ur Tekniska museet 3d-scannades och \n                    &#xe5;terskapades i VR d&#xe4;r det g&#xe5;r att interagera med olika modeller och objekt. \n                    Tekniska museets &#xe5;rsbok digitaliserades och gjordes s&#xf6;kbar utifr&#xe5;n ett interaktivt gr&#xe4;nssnitt.</span>\n                <br><br>\n                The research project &#x201d;Digital Models. Techno-historical collections, digital humanities &amp; narratives \n                of industrialisation&#x201d; (funded by the Royal Swedish Academy of Letters, History and Antiquities, \n                between 2016-19) is a collaboration between the Swedish National Museum of Science and Technology, \n                with a national responsibility for technical and industrial heritage, and the digital humanities hub, \n                HUMlab at Ume&#xe5; University. Based on selected parts of the museum&apos;s collections the project aims to \n                explore the potential of digital technologies to reframe Swedish industrialisation and its stories\n                about society, people and environments.\n                \n                <br><br>Read more at <a href=\"https://www.umu.se/forskning/projekt/digitala-modeller.-teknikhistoriens-samlingar-digital-humaniora--industrialismens-berattelser/\" target=\"_blank\">umu.se</a>",
+    "text": "Projektet är ett samarbete mellan Humlab och Tekniska museet i Stockholm. Med utgångspunkt i museets samlingar, den digitala teknikens möjligheter och industrialismens berättelser om samhälle, människor och miljöer syftar projektet till att från tre olika kulturarvsperspektiv undersöka digitaliseringens specificitet och potential som brygga mellan forskning, minnesinstitution och besökare. Föremål ur Tekniska museet 3d-scannades och återskapades i VR där det går att interagera med olika modeller och objekt. Tekniska museets årsbok digitaliserades och gjordes sökbar utifrån ett interaktivt gränssnitt. The research project ”Digital Models. Techno-historical collections, digital humanities & narratives of industrialisation” (funded by the Royal Swedish Academy of Letters, History and Antiquities, between 2016-19) is a collaboration between the Swedish National Museum of Science and Technology, with a national responsibility for technical and industrial heritage, and the digital humanities hub, HUMlab at Umeå University. Based on selected parts of the museum's collections the project aims to explore the potential of digital technologies to reframe Swedish industrialisation and its stories about society, people and environments. Read more at umu.se",
+    "sv_text": "Projektet är ett samarbete mellan Humlab och Tekniska museet i Stockholm. Med utgångspunkt i museets samlingar, den digitala teknikens möjligheter och industrialismens berättelser om samhälle, människor och miljöer syftar projektet till att från tre olika kulturarvsperspektiv undersöka digitaliseringens specificitet och potential som brygga mellan forskning, minnesinstitution och besökare. Föremål ur Tekniska museet 3d-scannades och återskapades i VR där det går att interagera med olika modeller och objekt. Tekniska museets årsbok digitaliserades och gjordes sökbar utifrån ett interaktivt gränssnitt.",
+    "en_text": "The research project ”Digital Models. Techno-historical collections, digital humanities & narratives of industrialisation” (funded by the Royal Swedish Academy of Letters, History and Antiquities, between 2016-19) is a collaboration between the Swedish National Museum of Science and Technology, with a national responsibility for technical and industrial heritage, and the digital humanities hub, HUMlab at Umeå University. Based on selected parts of the museum's collections the project aims to explore the potential of digital technologies to reframe Swedish industrialisation and its stories about society, people and environments. Read more at umu.se",
+    "links": [
+      {
+        "href": "https://www.umu.se/forskning/projekt/digitala-modeller.-teknikhistoriens-samlingar-digital-humaniora--industrialismens-berattelser/",
+        "text": "umu.se",
+        "class": null
+      }
+    ]
+  },
+  "explore_button": {
+    "text": "Project Website ▶",
+    "href": "https://digitalamodeller.se/"
+  },
+  "people_humlab": [
+    {
+      "name": "Mattis Lindmark",
+      "href": "https://www.umu.se/personal/mattis-lindmark/"
+    },
+    {
+      "name": "Roger Mähler",
+      "href": "https://www.umu.se/personal/roger-mahler/"
+    },
+    {
+      "name": "Jim Robertsson",
+      "href": "https://www.umu.se/personal/jim-robertsson/"
+    },
+    {
+      "name": "Andreas Marklund",
+      "href": "https://www.umu.se/personal/andreas-marklund/"
+    }
+  ],
+  "people_previous": [
+    {
+      "name": "Anna Foka",
+      "href": null
+    }
+  ],
+  "cooperation": [
+    "Pelle Snickars",
+    "Johan Jarlbrink",
+    "Tekniska museet Stockholm"
+  ],
+  "financiers": [
+    {
+      "src": "assets/riksbankens-jubileumsfond.png",
+      "alt": "Riksdankens Jubileumsfond logotype",
+      "href": "https://www.rj.se/"
+    },
+    {
+      "src": "assets/Vitterhetsakademiens-logo.svg",
+      "alt": "vitterhetsakademiens logotype",
+      "href": "https://www.vitterhetsakademien.se"
+    }
+  ],
+  "tags": [
+    "Photogrametry",
+    "VR"
+  ],
+  "images": [
+    {
+      "src": "assets/digitalamodeller/DM-2.png",
+      "alt": "Screenshot from 3D display program Shetchfab of rendered object",
+      "caption": "Screenshot from Sketchfab displaying 3D model object.",
+      "location": "left-container"
+    },
+    {
+      "src": "assets/digitalamodeller/DM-3.png",
+      "alt": "3D rendered objact with lines showing structure",
+      "caption": "3D rendered object.",
+      "location": "right-container"
+    },
+    {
+      "src": "assets/digitalamodeller/DM-1.png",
+      "alt": "3D wooden object",
+      "caption": "Screenshot of 3D wooden object from Sketchfab",
+      "location": "right-container"
+    }
+  ],
+  "info_boxes": [
+    "The project uses three different cultural heritage perspectives to examine the specificity of digitisation and its potential to bridge research, institutional heritage and interest from the general public."
+  ],
+  "videos": [
+    {
+      "src": "https://sketchfab.com/models/6b539f050ff548ad933670d0db91b645/embed?transparent=1",
+      "title": "Mechanical wooden model"
+    },
+    {
+      "src": "https://www.youtube.com/embed/kmNcoNoO2ec",
+      "title": "YouTube video player"
+    },
+    {
+      "src": "https://www.youtube.com/embed/o-50LTZlXR8",
+      "title": "YouTube video player"
+    }
+  ],
+  "all_links": [
+    {
+      "href": "https://www.umu.se/forskning/projekt/digitala-modeller.-teknikhistoriens-samlingar-digital-humaniora--industrialismens-berattelser/",
+      "text": "umu.se",
+      "class": null
+    },
+    {
+      "href": "https://digitalamodeller.se/",
+      "text": "Project Website ▶",
+      "class": "explore-button"
+    },
+    {
+      "href": "https://www.umu.se/personal/mattis-lindmark/",
+      "text": "Mattis Lindmark",
+      "class": null
+    },
+    {
+      "href": "https://www.umu.se/personal/roger-mahler/",
+      "text": "Roger Mähler",
+      "class": null
+    },
+    {
+      "href": "https://www.umu.se/personal/jim-robertsson/",
+      "text": "Jim Robertsson",
+      "class": null
+    },
+    {
+      "href": "https://www.umu.se/personal/andreas-marklund/",
+      "text": "Andreas Marklund",
+      "class": null
+    },
+    {
+      "href": "https://www.rj.se/",
+      "text": null,
+      "class": null
+    },
+    {
+      "href": "https://www.vitterhetsakademien.se",
+      "text": null,
+      "class": null
+    }
+  ],
+  "copied_images": [
+    {
+      "original_src": "assets/digitalamodeller/DM-2.png",
+      "local_path": "images/digitalamodeller/DM-2.png"
+    },
+    {
+      "original_src": "assets/digitalamodeller/DM-3.png",
+      "local_path": "images/digitalamodeller/DM-3.png"
+    },
+    {
+      "original_src": "assets/digitalamodeller/DM-1.png",
+      "local_path": "images/digitalamodeller/DM-1.png"
+    },
+    {
+      "original_src": "assets/riksbankens-jubileumsfond.png",
+      "local_path": "images/riksbankens-jubileumsfond.png"
+    },
+    {
+      "original_src": "assets/Vitterhetsakademiens-logo.svg",
+      "local_path": "images/Vitterhetsakademiens-logo.svg"
+    }
+  ]
+}

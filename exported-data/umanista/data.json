@@ -1,0 +1,82 @@
+{
+  "slug": "umanista",
+  "title": "Umanista",
+  "year": "2019–2021, 2023",
+  "description": {
+    "html": "Umanista var ett pedagogiskt utvecklingsprojekt som handlade om att f&#xf6;rs&#xf6;ka hitta en ny form \n                av kontinuerlig kompetensutveckling f&#xf6;r l&#xe4;rare inom den Humanistiska fakulteten.\n                Genom en &#xf6;ppen, digital l&#xe4;rmilj&#xf6; f&#xf6;r l&#xe4;rare, d&#xe4;r vi samtalade, delade med oss av \n                erfarenheter, visade goda exempel och framf&#xf6;r allt l&#xe4;rde av varandra, ville vi skapa \n                en ny form f&#xf6;r h&#xf6;gskolepedagogisk utveckling. M&#xe5;let var att vi d&#xe4;rigenom f&#xe5; till st&#xe5;nd \n                en mer effektiv, h&#xe5;llbar och kollegialt underbyggd form av pedagogisk kompetensutveckling, \n                som ocks&#xe5; har potential att positivt inverka p&#xe5; l&#xe4;rares arbetsmilj&#xf6;. Navet i den \n                digitala l&#xe4;rmilj&#xf6;n var en publik blogg, d&#xe4;r olika former av material \n                tillg&#xe4;ngliggjordes och diskuterades.\n                <br><br><a href=\"https://www.umu.se/humlab/utbildning/umanista/\" target=\"_blank\">L&#xe4;s mer p&#xe5; umu.se</a>\n                <br><a href=\"https://www.youtube.com/channel/UCos9QhMGTltPyhPq8OWsYRw\" target=\"_blank\">Umanista p&#xe5; YouTube</a>\n                <br><a href=\"https://twitter.com/umanistaumu\" target=\"_blank\">Umanista p&#xe5; Twitter</a>",
+    "text": "Umanista var ett pedagogiskt utvecklingsprojekt som handlade om att försöka hitta en ny form av kontinuerlig kompetensutveckling för lärare inom den Humanistiska fakulteten. Genom en öppen, digital lärmiljö för lärare, där vi samtalade, delade med oss av erfarenheter, visade goda exempel och framför allt lärde av varandra, ville vi skapa en ny form för högskolepedagogisk utveckling. Målet var att vi därigenom få till stånd en mer effektiv, hållbar och kollegialt underbyggd form av pedagogisk kompetensutveckling, som också har potential att positivt inverka på lärares arbetsmiljö. Navet i den digitala lärmiljön var en publik blogg, där olika former av material tillgängliggjordes och diskuterades. Läs mer på umu.se Umanista på YouTube Umanista på Twitter",
+    "sv_text": null,
+    "en_text": null,
+    "links": [
+      {
+        "href": "https://www.umu.se/humlab/utbildning/umanista/",
+        "text": "Läs mer på umu.se",
+        "class": null
+      },
+      {
+        "href": "https://www.youtube.com/channel/UCos9QhMGTltPyhPq8OWsYRw",
+        "text": "Umanista på YouTube",
+        "class": null
+      },
+      {
+        "href": "https://twitter.com/umanistaumu",
+        "text": "Umanista på Twitter",
+        "class": null
+      }
+    ]
+  },
+  "explore_button": {
+    "text": "Utforska Umanistas hemsida ▶",
+    "href": "https://umanista.se/"
+  },
+  "people_humlab": [
+    {
+      "name": "Jon Svensson",
+      "href": "https://www.umu.se/personal/jon-svensson/"
+    }
+  ],
+  "people_previous": [
+    {
+      "name": "Stefan Gelfgren",
+      "href": null
+    }
+  ],
+  "cooperation": [
+    "Stefan Gelfgren",
+    "Jenny Eklöf",
+    "Humanistisk Fakultet"
+  ],
+  "financiers": [],
+  "tags": [],
+  "images": [],
+  "info_boxes": [],
+  "videos": [],
+  "all_links": [
+    {
+      "href": "https://www.umu.se/humlab/utbildning/umanista/",
+      "text": "Läs mer på umu.se",
+      "class": null
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCos9QhMGTltPyhPq8OWsYRw",
+      "text": "Umanista på YouTube",
+      "class": null
+    },
+    {
+      "href": "https://twitter.com/umanistaumu",
+      "text": "Umanista på Twitter",
+      "class": null
+    },
+    {
+      "href": "https://umanista.se/",
+      "text": "Utforska Umanistas hemsida ▶",
+      "class": "explore-button"
+    },
+    {
+      "href": "https://www.umu.se/personal/jon-svensson/",
+      "text": "Jon Svensson",
+      "class": null
+    }
+  ],
+  "copied_images": []
+}

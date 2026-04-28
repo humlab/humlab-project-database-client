@@ -1,0 +1,141 @@
+{
+  "slug": "visp",
+  "title": "VISP - Visible Speech",
+  "year": null,
+  "description": {
+    "html": "<span class=\"sv\">Forskningsplattformen Visible Speech (VISP) &#xe4;r en infrastruktur som \n                    under hela uppbyggnadsprocessen designats f&#xf6;r att m&#xf6;jligg&#xf6;ra en hantering av \n                    ljudinspelningar av personer som talar, i enlighet med GDPR och kraven vad \n                    g&#xe4;ller IT-s&#xe4;kerhet. Plattformen kommer m&#xf6;jligg&#xf6;ra och f&#xf6;renkla nationella \n                    samarbeten eftersom det g&#xe5;r att arbeta direkt mot det ljudinspelade materialet \n                    utan att riskera att det sprids vidare. VISP har tv&#xe5; niv&#xe5;er, d&#xe4;r den yttre niv&#xe5;n \n                    &#xe4;r en &#xf6;ppen plattform som inte lagrar data och den inre niv&#xe5;n ger forskare en \n                    s&#xe4;ker milj&#xf6; att ladda upp, g&#xf6;ra akustisk signalanalys, lyssna p&#xe5; och notera, \n                    samt analysera talmaterial.</span>\n                <br><br>\n                The Visible Speech (VISP) infrastructure provides access to a centralized environment for \n                spoken language research that strives to meet both researchers&apos; need for efficient workflows \n                and the legislator&apos;s requirement of secured data management. The infrastructure offers the \n                research community a unified environment for conducting reproducible speech signal \n                processing in an environment that supports national and international collaborations. \n                In fact, the VISP platform offers the most comprenehsive set of publically available \n                speech and voice analysis procedures in the world in its framework. \n                \n                <br><br>\n                Digital archiving of hosted projects is also made easier by a uniform, documented, \n                and transparent directory structure for all projects in VISP, which also reduces \n                barriers to making data available in accordance with the FAIR principles.",
+    "text": "Forskningsplattformen Visible Speech (VISP) är en infrastruktur som under hela uppbyggnadsprocessen designats för att möjliggöra en hantering av ljudinspelningar av personer som talar, i enlighet med GDPR och kraven vad gäller IT-säkerhet. Plattformen kommer möjliggöra och förenkla nationella samarbeten eftersom det går att arbeta direkt mot det ljudinspelade materialet utan att riskera att det sprids vidare. VISP har två nivåer, där den yttre nivån är en öppen plattform som inte lagrar data och den inre nivån ger forskare en säker miljö att ladda upp, göra akustisk signalanalys, lyssna på och notera, samt analysera talmaterial. The Visible Speech (VISP) infrastructure provides access to a centralized environment for spoken language research that strives to meet both researchers' need for efficient workflows and the legislator's requirement of secured data management. The infrastructure offers the research community a unified environment for conducting reproducible speech signal processing in an environment that supports national and international collaborations. In fact, the VISP platform offers the most comprenehsive set of publically available speech and voice analysis procedures in the world in its framework. Digital archiving of hosted projects is also made easier by a uniform, documented, and transparent directory structure for all projects in VISP, which also reduces barriers to making data available in accordance with the FAIR principles.",
+    "sv_text": "Forskningsplattformen Visible Speech (VISP) är en infrastruktur som under hela uppbyggnadsprocessen designats för att möjliggöra en hantering av ljudinspelningar av personer som talar, i enlighet med GDPR och kraven vad gäller IT-säkerhet. Plattformen kommer möjliggöra och förenkla nationella samarbeten eftersom det går att arbeta direkt mot det ljudinspelade materialet utan att riskera att det sprids vidare. VISP har två nivåer, där den yttre nivån är en öppen plattform som inte lagrar data och den inre nivån ger forskare en säker miljö att ladda upp, göra akustisk signalanalys, lyssna på och notera, samt analysera talmaterial.",
+    "en_text": "The Visible Speech (VISP) infrastructure provides access to a centralized environment for spoken language research that strives to meet both researchers' need for efficient workflows and the legislator's requirement of secured data management. The infrastructure offers the research community a unified environment for conducting reproducible speech signal processing in an environment that supports national and international collaborations. In fact, the VISP platform offers the most comprenehsive set of publically available speech and voice analysis procedures in the world in its framework. Digital archiving of hosted projects is also made easier by a uniform, documented, and transparent directory structure for all projects in VISP, which also reduces barriers to making data available in accordance with the FAIR principles.",
+    "links": []
+  },
+  "explore_button": {
+    "text": "Explore Applicaton ▶",
+    "href": "https://visp.humlab.umu.se"
+  },
+  "people_humlab": [
+    {
+      "name": "Johan von Boer",
+      "href": "https://www.umu.se/personal/johan-von-boer/"
+    },
+    {
+      "name": "Tomas Skotare",
+      "href": "https://www.umu.se/personal/tomas-skotare/"
+    },
+    {
+      "name": "Kajsa Palm",
+      "href": "https://www.umu.se/personal/kajsa-palm/"
+    }
+  ],
+  "people_previous": [],
+  "cooperation": [
+    "Fredrik Karlsson",
+    "Linda Sandström",
+    "Department of Clinical Sciences"
+  ],
+  "financiers": [
+    {
+      "src": "assets/vr.png",
+      "alt": "Swedish research council logotype",
+      "href": "https://www.vr.se/"
+    },
+    {
+      "src": "assets/umu-logo-EN.png",
+      "alt": "Umeå University logotype",
+      "href": "https://www.umu.se/humlab/"
+    }
+  ],
+  "tags": [
+    "Docker",
+    "Jupyter",
+    "Two-factor authentication"
+  ],
+  "images": [
+    {
+      "src": "assets/visp/visp-screenshot-1.png",
+      "alt": "VISP user interface",
+      "caption": "EMU-WebApp speech analysis tool is one of the integrated applications in the VISP system.",
+      "location": "left-container"
+    },
+    {
+      "src": "assets/visp/visp.png",
+      "alt": "VISP user interface screenshot of EMU-WebApp",
+      "caption": "EMU-WebApp speech analysis tool is one of the integrated applications in the VISP system.",
+      "location": "right-container"
+    },
+    {
+      "src": "assets/visp/screenshot5.png",
+      "alt": "VISP user interface screenshot integration with GitLab",
+      "caption": "All data in the VISP system is version controlled through integration with GitLab.",
+      "location": "right-container"
+    }
+  ],
+  "info_boxes": [
+    "Access to the secure areas of VISP is granted to projects nationally following a review process of the etical approval for the project, and an agreement on the processing of person identifiable information under the GDPR. But please don't hesitate to get in touch with one of the VISP team if you think the system might be useful to you."
+  ],
+  "videos": [],
+  "all_links": [
+    {
+      "href": "https://visp.humlab.umu.se",
+      "text": "Explore Applicaton ▶",
+      "class": "explore-button"
+    },
+    {
+      "href": "https://www.umu.se/personal/johan-von-boer/",
+      "text": "Johan von Boer",
+      "class": null
+    },
+    {
+      "href": "https://www.umu.se/personal/tomas-skotare/",
+      "text": "Tomas Skotare",
+      "class": null
+    },
+    {
+      "href": "https://www.umu.se/personal/kajsa-palm/",
+      "text": "Kajsa Palm",
+      "class": null
+    },
+    {
+      "href": "https://www.umu.se/institutionen-for-klinisk-vetenskap/",
+      "text": "Department of Clinical Sciences",
+      "class": null
+    },
+    {
+      "href": "https://www.vr.se/",
+      "text": null,
+      "class": null
+    },
+    {
+      "href": "https://www.umu.se/humlab/",
+      "text": null,
+      "class": null
+    },
+    {
+      "href": "https://sweclarin.se/",
+      "text": null,
+      "class": null
+    }
+  ],
+  "copied_images": [
+    {
+      "original_src": "assets/visp/visp-screenshot-1.png",
+      "local_path": "images/visp/visp-screenshot-1.png"
+    },
+    {
+      "original_src": "assets/visp/visp.png",
+      "local_path": "images/visp/visp.png"
+    },
+    {
+      "original_src": "assets/visp/screenshot5.png",
+      "local_path": "images/visp/screenshot5.png"
+    },
+    {
+      "original_src": "assets/vr.png",
+      "local_path": "images/vr.png"
+    },
+    {
+      "original_src": "assets/umu-logo-EN.png",
+      "local_path": "images/umu-logo-EN.png"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "ships",
+  "title": "Swedish Historical Population StatisticsSHiPS",
+  "year": null,
+  "description": {
+    "html": "Insert text here",
+    "text": "Insert text here",
+    "sv_text": null,
+    "en_text": null,
+    "links": []
+  },
+  "explore_button": {
+    "text": "Explore Application ▶",
+    "href": "http://ships.ddb.umu.se/?view_state=1085&application_name=ships"
+  },
+  "people_humlab": [],
+  "people_previous": [],
+  "cooperation": [],
+  "financiers": [],
+  "tags": [],
+  "images": [
+    {
+      "src": null,
+      "alt": null,
+      "caption": "Image text",
+      "location": "left-container"
+    },
+    {
+      "src": null,
+      "alt": null,
+      "caption": "Image text",
+      "location": "right-container"
+    }
+  ],
+  "info_boxes": [
+    "Insert text here"
+  ],
+  "videos": [
+    {
+      "src": "https://www.youtube.com/embed/kmNcoNoO2ec",
+      "title": "YouTube video player"
+    }
+  ],
+  "all_links": [
+    {
+      "href": "http://ships.ddb.umu.se/?view_state=1085&application_name=ships",
+      "text": "Explore Application ▶",
+      "class": "explore-button"
+    },
+    {
+      "href": "https://www.umu.se/personal/johan-von-boer/",
+      "text": "Johan von Boer",
+      "class": null
+    },
+    {
+      "href": "https://www.umu.se/personal/marita-nilsson/",
+      "text": "Marita Nilsson",
+      "class": null
+    }
+  ],
+  "copied_images": []
+}

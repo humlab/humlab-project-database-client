@@ -1,0 +1,689 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Ensure the HTML `hidden` attribute always hides elements,
+   even when author styles set an explicit `display` value. */
+[hidden] {
+  display: none !important;
+}
+
+:root {
+  color-scheme: light;
+  --ink: #101418;
+  --muted: #556270;
+  --bg: #eaedf3;
+  --panel: #f9f6f1;
+  --accent: #5553e0;
+  --cube-size: 300px;
+}
+
+body {
+  margin: 0;
+  font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+  color: var(--ink);
+  background-color: #000;
+  background:
+    url('../assets/top-bg.png') top center / 100% auto no-repeat,
+    #000000;
+  background-attachment: fixed, fixed;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+/* ── Page shell: a locked flex column filling the viewport ── */
+.page {
+  --header-height: 8em;
+  --scroll-progress: 0;
+  /* No max-width or side padding — the cube-stage needs to use the full viewport width */
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative; /* anchor for .hero-search absolute positioning */
+}
+
+/* ── Hero: height interpolates from 100 vh → --header-height ── */
+.hero {
+  flex: 0 0 auto;
+  height: calc(100vh - var(--scroll-progress) * (100vh - var(--header-height)));
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Horizontal padding lives here, not on .page, so .cube-stage stays full-width */
+  padding: 48px clamp(24px, 4vw, 64px);
+  z-index: 10;
+  overflow: hidden;
+  background: transparent;
+  transition: background 0.4s ease, border-radius 0.4s ease, padding 0.3s ease;
+}
+
+/* Flex spacers replace justify-content:center so content
+   naturally slides from centred (100 vh) to top-aligned (header-height) */
+.hero::before,
+.hero::after {
+  content: '';
+  flex: 1 1 0;
+}
+
+/* Visual compact state — fires earlier than .docked (see HeroScrollController) */
+.page.hero-scrolled .hero {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.8));
+  border-radius: 0 0 12px 12px;
+  padding: 0 48px;
+}
+
+/* Smooth return to splash */
+.page.undocking .hero {
+  transition: height 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.5s ease,
+              border-radius 0.5s ease,
+              padding 0.5s ease;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.75rem;
+  color: #fff;
+  margin: 0 0 12px;
+  opacity: 1;
+}
+
+.eyebrow__logo {
+  height: 2rem;
+  width: auto;
+  display: block;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  margin: 0 0 12px;
+  line-height: 1.05;
+  color: #fff;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: font-size 0.4s ease;
+}
+
+.page.hero-scrolled .hero h1 {
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+}
+
+/* ── Search box: absolutely positioned to the right of the collapsed header ──
+   Lives outside .hero so it is never clipped by the hero overflow/height animation. */
+.hero-search {
+  position: absolute;
+  top: 0;
+  right: clamp(24px, 4vw, 64px);
+  height: var(--header-height);
+  width: clamp(200px, 25vw, 360px);
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  z-index: 11; /* above .hero */
+}
+
+.page.hero-scrolled .hero-search {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.page.undocking .hero-search {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.hero-search__input {
+  width: 100%;
+  padding: 0.45em 1em;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  color: #fff;
+  font: inherit;
+  font-size: 0.9rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.hero-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.hero-search__input:focus {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Clear (✕) button rendered by browser for type=search */
+.hero-search__input::-webkit-search-cancel-button {
+  filter: invert(1);
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.subhead {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #fff;
+  opacity: calc(1 - var(--scroll-progress) * 3);
+  max-height: 6em;
+  overflow: hidden;
+}
+
+.page.docked .subhead {
+  max-height: 0;
+  opacity: 0;
+}
+
+.page.undocking .subhead {
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+/* ── Cube stage: fills remaining height, scrollable when docked ── */
+.cube-stage {
+  flex: 1 1 0;
+  min-height: 0;
+  /* overflow:hidden on both axes: partial cubes at any edge are never visible */
+  overflow: hidden;
+  opacity: var(--scroll-progress);
+  padding-bottom: 80px;
+  /* Soft fade at the top so cubes dissolve behind the header rather than hard-clipping */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 3em);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 3em);
+}
+
+.page.docked .cube-stage {
+  overflow-x: hidden; /* still no horizontal partial cubes */
+  overflow-y: auto;   /* vertical scroll lets the user reach all cubes */
+  overscroll-behavior-y: contain;
+  opacity: 1;
+}
+
+.page.undocking .cube-stage {
+  transition: opacity 0.3s ease;
+}
+
+.cube-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 120px;
+  row-gap: 60px;
+  justify-items: center;
+  justify-content: center;
+  margin: 50px 100px;
+  transform: translateY(calc((1 - var(--scroll-progress)) * 30vh));
+}
+
+.page.docked .cube-grid {
+  transform: none;
+}
+
+.page.undocking .cube-grid {
+  transition: transform 0.5s ease;
+}
+
+/* At very large viewports, cap the grid so cubes don't become excessively wide */
+@media (min-width: 2200px) {
+  .cube-grid {
+    grid-template-columns: repeat(6, minmax(300px, 1fr));
+  }
+}
+
+.project-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: none;
+  pointer-events: none;
+}
+
+.project-modal.is-open {
+  display: block;
+  pointer-events: auto;
+}
+
+.project-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 10, 12, 0.45);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.project-modal.is-open .project-modal__backdrop {
+  opacity: 1;
+}
+
+.project-modal__panel {
+  position: fixed;
+  top: var(--panel-top, 5vh);
+  left: var(--panel-left, 5vw);
+  width: var(--panel-width, 90vw);
+  height: var(--panel-height, 90vh);
+  /*background: linear-gradient(90deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 1.0), rgba(245, 245, 245, 0.9));*/
+  background: var(--panel);
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transform-origin: top left;
+  transform: translate(var(--start-x, 0px), var(--start-y, 0px))
+    scale(var(--start-scale-x, 1), var(--start-scale-y, 1));
+  transition: transform 0.6s ease, border-radius 0.6s ease;
+  will-change: transform;
+  border-style: solid;
+  border-width: 6px;
+  border-color: rgb(0, 50, 100);
+}
+
+.project-modal.is-open .project-modal__panel {
+  transform: translate(0px, 0px) scale(1, 1);
+}
+
+@keyframes close-gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.project-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(16, 20, 24, 0.1);
+  background-size: 200% 200%;
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+}
+
+.project-modal__close:hover {
+  background: linear-gradient(135deg, rgba(16, 20, 24, 0.05), rgba(16, 20, 24, 0.3), rgba(16, 20, 24, 0.05));
+  background-size: 200% 200%;
+  animation: close-gradient-shift 1.5s ease infinite;
+}
+
+.project-modal__content {
+  padding: 56px 48px 48px;
+  height: 100%;
+  overflow: auto;
+  /* Prevent scroll from chaining to .cube-stage when hitting the top/bottom boundary */
+  overscroll-behavior: contain;
+}
+
+.project-detail {
+  display: grid;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--ink);
+}
+
+.project-detail > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.project-detail > *:nth-child(1) { animation-delay: 0.1s; }
+.project-detail > *:nth-child(2) { animation-delay: 0.2s; }
+.project-detail > *:nth-child(3) { animation-delay: 0.3s; }
+.project-detail > *:nth-child(4) { animation-delay: 0.4s; }
+.project-detail > *:nth-child(5) { animation-delay: 0.5s; }
+.project-detail > *:nth-child(6) { animation-delay: 0.6s; }
+.project-detail > *:nth-child(7) { animation-delay: 0.7s; }
+.project-detail > *:nth-child(8) { animation-delay: 0.8s; }
+.project-detail > *:nth-child(9) { animation-delay: 0.9s; }
+.project-detail > *:nth-child(n+10) { animation-delay: 1s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-detail__header {
+  display: grid;
+  gap: 12px;
+}
+
+.project-detail__title {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  line-height: 1.1;
+}
+
+.project-detail__subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.project-detail__summary {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.project-detail__media img,
+.project-detail__gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+.project-detail__figure {
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.project-detail__figure figcaption {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.project-detail__quote {
+  margin: 0;
+  padding: 16px 20px;
+  border-left: 4px solid var(--accent);
+  background: rgba(83, 107, 224, 0.08);
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.project-detail__body p {
+  margin: 0 0 16px;
+  line-height: 1.6;
+}
+
+.project-detail__body p:last-child {
+  margin-bottom: 0;
+}
+
+.project-detail__gallery {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.project-detail__section {
+  display: grid;
+  gap: 12px;
+}
+
+.project-detail__section h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.project-detail__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.project-detail__people {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.project-detail__person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  border: 2px solid transparent;
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.project-detail__person.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-detail__person:has(a) {
+  border-color: #4a90e2;
+  cursor: pointer;
+}
+
+.project-detail__person:has(a):hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(74, 144, 226, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-detail__person-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.project-detail__person-name {
+  font-weight: 600;
+}
+
+.project-detail__person-assoc {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.project-detail__person-link {
+  display: none;
+}
+
+.project-detail__loading,
+.project-detail__error {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.project-detail__loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Cube container with perspective */
+.cube-container {
+  width: var(--cube-size);
+  height: var(--cube-size);
+  perspective: 800px;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.3s ease;
+  --cube-depth: calc(var(--cube-size) / 2);
+}
+
+.cube-container:focus-visible {
+  outline: 3px solid rgba(224, 107, 83, 0.6);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* Cube */
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease-in-out;
+  transform: rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  
+}
+
+/* Cube faces */
+.cube-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.15);
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+/* Individual faces of the cube */
+.front {
+  background-image: var(
+    --front-image,
+    linear-gradient(
+      135deg,
+      hsl(var(--front-h, 210) 60% 82%),
+      hsl(calc(var(--front-h, 210) + 25) 60% 65%)
+    )
+  );
+  transform: translateZ(var(--cube-depth));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.back {
+  background: linear-gradient(135deg, rgba(10, 12, 14, 0.3), rgba(0, 0, 0, 0.5));
+  transform: rotateY(180deg) translateZ(var(--cube-depth));
+}
+
+.right {
+  background-image: var(
+    --side-image,
+    linear-gradient(
+      135deg,
+      hsl(var(--side-h, 20) 70% 80%),
+      hsl(calc(var(--side-h, 20) + 35) 70% 62%)
+    )
+  );
+  transform: rotateY(90deg) translateZ(var(--cube-depth));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.left {
+  background: linear-gradient(
+    135deg,
+    rgba(220, 228, 234, 0.7),
+    rgba(176, 196, 209, 0.5)
+  );
+  transform: rotateY(-90deg) translateZ(var(--cube-depth));
+}
+
+.top {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(200, 200, 200, 0.3));
+  transform: rotateX(90deg) translateZ(var(--cube-depth));
+}
+
+.bottom {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+  transform: rotateX(-90deg) translateZ(var(--cube-depth));
+}
+
+.cube-title {
+  position: absolute;
+  inset: auto 12px 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(8, 10, 12, 0.75), rgba(8, 10, 12, 0.35));
+  color: #f7f4ef;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.cube-side-description {
+  position: absolute;
+  inset: auto 12px 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(8, 10, 12, 0.7), rgba(8, 10, 12, 0.3));
+  color: #f7f4ef;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+  max-width: calc(100% - 24px);
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  pointer-events: none;
+  z-index: 1; /* Stay above the video overlay */
+}
+
+/* Video overlay on the right (secondary) cube face.
+   The side-image CSS background acts as a poster placeholder
+   and remains visible beneath the video until it is ready. */
+.cube-face-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  pointer-events: none;
+}
+
+.cube-face-video--ready {
+  opacity: 1;
+}
+
+/* Rotate the cube 90 degrees on hover */
+.cube-container:hover .cube,
+.cube-container:focus-visible .cube {
+  transform: rotateX(var(--tilt-x, 0deg)) rotateY(calc(var(--tilt-y, 0deg) - 90deg));
+}
+
+@media (max-width: 720px) {
+  :root {
+    --cube-size: 200px;
+  }
+
+  .cube-grid {
+    column-gap: 48px;
+    row-gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}

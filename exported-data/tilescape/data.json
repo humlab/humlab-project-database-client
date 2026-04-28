@@ -1,0 +1,143 @@
+{
+  "slug": "tilescape",
+  "title": "A showcase of current and completed projects at Humlab, Umeå University",
+  "year": null,
+  "description": null,
+  "explore_button": null,
+  "people_humlab": [],
+  "people_previous": [],
+  "cooperation": [],
+  "financiers": [],
+  "tags": [],
+  "images": [],
+  "info_boxes": [],
+  "videos": [],
+  "all_links": [
+    {
+      "href": "http://umu.se/humlab",
+      "text": "Humlab",
+      "class": null
+    },
+    {
+      "href": "/sead",
+      "text": "SweDigArch",
+      "class": null
+    },
+    {
+      "href": "/visp",
+      "text": "Swe-Clarin",
+      "class": null
+    },
+    {
+      "href": "/westac",
+      "text": "Welfare state analytics",
+      "class": null
+    },
+    {
+      "href": "/inidun",
+      "text": "International Ideas at UNESCO",
+      "class": null
+    },
+    {
+      "href": "/swedeb",
+      "text": "SweDeb",
+      "class": null
+    },
+    {
+      "href": "/infravis-sead",
+      "text": "SEAD Conservation Paleobiology InfraVis",
+      "class": null
+    },
+    {
+      "href": "/digibon",
+      "text": "DigiBön",
+      "class": null
+    },
+    {
+      "href": "/plagiat",
+      "text": "Nätutbildning om plagiat",
+      "class": null
+    },
+    {
+      "href": "/queer-ai",
+      "text": "Queer AI",
+      "class": null
+    },
+    {
+      "href": "/aps",
+      "text": "Andra Person Singular 2023",
+      "class": null
+    },
+    {
+      "href": "/umanista",
+      "text": "Umanista 2019–2021, 2023–",
+      "class": null
+    },
+    {
+      "href": "/linguistic-landscape",
+      "text": "The Language of Place-making 2019–2022",
+      "class": null
+    },
+    {
+      "href": "/dialectical-imaginaries",
+      "text": "Dialectical Imaginaries 2020–2021",
+      "class": null
+    },
+    {
+      "href": "/going-beyond-search",
+      "text": "Going beyond search 2019",
+      "class": null
+    },
+    {
+      "href": "/tcoir",
+      "text": "The Culture of International Society 2016–2019",
+      "class": null
+    },
+    {
+      "href": "/digital-periegesis",
+      "text": "Digital Periegesis 2018–2021",
+      "class": null
+    },
+    {
+      "href": "/melody",
+      "text": "Melody 2018–2021",
+      "class": null
+    },
+    {
+      "href": "/iaccept",
+      "text": "iAccept 2017–2021",
+      "class": null
+    },
+    {
+      "href": "/rave",
+      "text": "RAVE & C-RAVE 2015–2020",
+      "class": null
+    },
+    {
+      "href": "/digitalamodeller",
+      "text": "Digitala modeller 2016–2019",
+      "class": null
+    },
+    {
+      "href": "/enida",
+      "text": "ENIDA 2019",
+      "class": null
+    },
+    {
+      "href": "/yrkesrum",
+      "text": "Yrkesrum 2018",
+      "class": null
+    },
+    {
+      "href": "/utopia",
+      "text": "Utopia 2017",
+      "class": null
+    },
+    {
+      "href": "/staden",
+      "text": "Staden 2014",
+      "class": null
+    }
+  ],
+  "copied_images": []
+}
