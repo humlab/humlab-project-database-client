@@ -1,7 +1,5 @@
 import { getVideoMode, normalizeMediaUrl } from './normalize.js';
 
-const DEFAULT_API_PORT = 3100;
-
 function asArray(value) {
   return Array.isArray(value) ? value.filter(Boolean) : [];
 }
@@ -116,11 +114,7 @@ export function getApiBaseUrl() {
     return fromEnv.replace(/\/+$/, '');
   }
 
-  if (typeof window === 'undefined') {
-    return `http://localhost:${DEFAULT_API_PORT}`;
-  }
-
-  return `${window.location.protocol}//${window.location.hostname}:${DEFAULT_API_PORT}`;
+  return '/api';
 }
 
 async function requestJson(path) {
